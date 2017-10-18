@@ -1,0 +1,100 @@
+<!doctype html5>
+<html>
+  <head>
+    <title>RiskPropApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+  </head>
+
+  <body>
+    
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">ChurnScoreApp</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Build Model</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('step_dashboard') }}">Dashboard<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+    </nav>
+
+    <div class="jumbotron">
+      <h1 class="display-3"> Welcome to ChurnScoreApp!</h1>
+      <p class="lead"> The simple way of predicting churn, reducing business risk and improving customer support. </p>
+      <p class="lead"> Combat uncertainty and identify new business opportunities in 3 easy steps: Categorise. Model. Predict </p>
+    </div>
+
+    {% include 'temp-plot.html' %}
+
+    <br/><br/><br/>
+    
+    <!-- Plans -->
+    <section id="plans">
+        <div class="container">
+            <div class="row">
+
+                <!-- item -->
+                <div class="col-md-6 text-center">
+                    <div class="panel panel-warning panel-pricing">
+                        <div class="panel-heading">
+                            <i class="fa fa-desktop"></i>
+                            <h3>Basic</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p><strong>Free</strong></p>
+                        </div>
+                        <ul class="list-group text-center">
+                          <li class="list-group-item"><i class="fa fa-check"></i> Single Model</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i> 100GB instances</li>			  
+                            <li class="list-group-item"><i class="fa fa-check"></i> Personal Use</li>
+                        </ul>
+                        <div class="panel-footer">
+                            <a class="btn btn-lg btn-block btn-warning" href="#">FREE REGISTRATION NOW!</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /item -->
+
+                <!-- item -->
+                <div class="col-md-6 text-center">
+                    <div class="panel panel-success panel-pricing">
+                        <div class="panel-heading">
+                            <i class="fa fa-desktop"></i>
+                            <h3>Pro</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p><strong>£300 / Month</strong></p>
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"><i class="fa fa-check"></i> Unlimited Models</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i> 1000GB instances</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>
+                        </ul>
+                        <div class="panel-footer">
+                            <a class="btn btn-lg btn-block btn-success" href="#">BUY NOW!</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /item -->
+
+            </div>
+        </div>
+    </section>
+    <!-- /Plans -->
+    
+
+</br></br></br>
+
+
+  </body>
+
+</html>
